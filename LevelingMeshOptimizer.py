@@ -66,7 +66,7 @@ class LevelingMeshOptimizer(Script):
         return bounds
 
 
-    ##  Replaces the M557 command in the start GCODE so that the bounds are filled in.
+    ##  Replaces the G29 command in the start GCODE so that the bounds are filled in.
     #   \param data The entire start GCODE block.
     #   \return The same GCODE but with the bounds of the mesh filled in.
     def fillBounds(self, data: str, bounds: {str: {str: float}}) -> str:
@@ -77,5 +77,5 @@ class LevelingMeshOptimizer(Script):
             bounds["Y"]["min"], min([180,bounds["Y"]["max"]]),
 )
 
-        # Replace M557 command in GCODE
+        # Replace G29 command in GCODE
         return re.sub(r"^G29 .*$", new_cmd, data, flags=re.MULTILINE)
