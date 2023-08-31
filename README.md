@@ -6,4 +6,4 @@ b- In your Start Gcode G29 must be placed after G28.
 c- In Cura MENU select Extensions---Post Processing---Modify Gcode  and then select from Drop Down Menu the script with name Leveling Mesh Optimizer , the spacing value 10mm doesnt have any effect and reserve for future use. 
 d- Now add your parts to be 3d printed and save the file... In the file you will find G29 L15.275 R190.000 F15.275 B180.000  the values infront of LRFB are calculated bounding box with 6mm skirt offset.
 Test and Enjoy.
-https://github.com/KhalidKhattak/Adaptive-Mesh-Levelling-Cura
+https://www.youtube.com/watch?v=QksjSpTgaGU
